@@ -1,0 +1,944 @@
+/* Updated: 2025-11-05T11:55:21.183Z */
+/* Updated: 2025-11-05T10:44:37.664Z */
+/* Updated: 2025-11-04T23:10:49.240Z */
+/* Updated: 2025-11-04T22:11:39.584Z */
+/* Updated: 2025-11-04T17:22:24.278Z */
+/* Updated: 2025-11-04T17:18:23.670Z */
+/* Updated: 2025-11-04T16:43:00.452Z */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  
+  /* Soft Tech Lavender Light Theme */
+  --background: oklch(0.98 0.03 285);
+  --foreground: oklch(0.15 0.05 285);
+  
+  /* Card & Surfaces - Soft lavender glass */
+  --card: oklch(0.99 0.02 285);
+  --card-foreground: oklch(0.15 0.05 285);
+  
+  /* Popover */
+  --popover: oklch(0.99 0.02 285);
+  --popover-foreground: oklch(0.15 0.05 285);
+  
+  /* Deep Violet Primary - #6A35FF */
+  --primary: oklch(0.5 0.25 280);
+  --primary-foreground: oklch(0.99 0.02 285);
+  
+  /* Secondary - Soft lavender */
+  --secondary: oklch(0.95 0.05 285);
+  --secondary-foreground: oklch(0.2 0.08 285);
+  
+  /* Muted Elements - Pastel lavender */
+  --muted: oklch(0.96 0.04 285);
+  --muted-foreground: oklch(0.5 0.05 285);
+  
+  /* Accent - Light lavender */
+  --accent: oklch(0.95 0.06 285);
+  --accent-foreground: oklch(0.25 0.1 285);
+  
+  /* Destructive - Soft red */
+  --destructive: oklch(0.58 0.24 20);
+  
+  /* Borders & Inputs - Soft lavender */
+  --border: oklch(0.9 0.04 285);
+  --input: oklch(0.97 0.03 285);
+  --ring: oklch(0.5 0.25 280);
+  
+  /* Tech Color Accents - Soft lavender gradient */
+  --light-lavender: oklch(0.8 0.1 285);
+  --very-light-lavender: oklch(0.98 0.03 285);
+  --deep-violet: oklch(0.5 0.25 280);
+  --dark-violet-gray: oklch(0.15 0.05 285);
+  
+  /* Charts - Soft lavender gradient */
+  --chart-1: oklch(0.5 0.25 280);
+  --chart-2: oklch(0.6 0.2 285);
+  --chart-3: oklch(0.7 0.15 285);
+  --chart-4: oklch(0.8 0.1 285);
+  --chart-5: oklch(0.65 0.18 280);
+  
+  /* Duel Theme Colors - Purple vs Silver (NO RED/BLUE/GREEN/ORANGE) */
+  --duel-primary: oklch(0.6 0.28 280);     /* Vibrant purple - Player 1 */
+  --duel-secondary: oklch(0.75 0.03 270);  /* Cool silver - Player 2 */
+  --duel-accent: oklch(0.85 0.05 280);     /* Light violet-silver - Competition */
+  --duel-primary-glow: rgba(139, 92, 246, 0.5);
+  --duel-secondary-glow: rgba(203, 213, 225, 0.5);
+  --duel-accent-glow: rgba(226, 232, 240, 0.5);
+  --metallic-steel: oklch(0.65 0.02 270);
+  --energy-spark: oklch(0.85 0.15 280);
+  --energy-silver: oklch(0.80 0.04 270);
+}
+
+.dark {
+  /* Pure Black Dashboard Dark Theme */
+  --background: oklch(0.05 0.01 285);
+  --foreground: oklch(0.95 0.03 285);
+  
+  /* Card & Surfaces - Near black with slight lavender tint */
+  --card: oklch(0.08 0.02 285);
+  --card-foreground: oklch(0.95 0.03 285);
+  
+  /* Popover */
+  --popover: oklch(0.08 0.02 285);
+  --popover-foreground: oklch(0.95 0.03 285);
+  
+  /* Deep Violet Primary - Brighter for dark mode */
+  --primary: oklch(0.6 0.28 280);
+  --primary-foreground: oklch(0.98 0.03 285);
+  
+  /* Secondary - Black tones instead of gray */
+  --secondary: oklch(0.12 0.02 285);
+  --secondary-foreground: oklch(0.9 0.05 285);
+  
+  /* Muted Elements - Dark black tones */
+  --muted: oklch(0.1 0.015 285);
+  --muted-foreground: oklch(0.7 0.05 285);
+  
+  /* Accent - Darker black with slight contrast */
+  --accent: oklch(0.15 0.03 285);
+  --accent-foreground: oklch(0.92 0.08 285);
+  
+  /* Destructive - Soft neon red */
+  --destructive: oklch(0.6 0.26 20);
+  
+  /* Borders & Inputs - Very dark */
+  --border: oklch(0.15 0.02 285);
+  --input: oklch(0.1 0.02 285);
+  --ring: oklch(0.6 0.28 280);
+  
+  /* Tech Color Accents - Enhanced for dark */
+  --light-lavender: oklch(0.8 0.15 285);
+  --very-light-lavender: oklch(0.95 0.08 285);
+  --deep-violet: oklch(0.6 0.28 280);
+  --dark-violet-gray: oklch(0.15 0.03 285);
+  
+  /* Charts - Vibrant lavender gradient */
+  --chart-1: oklch(0.6 0.28 280);
+  --chart-2: oklch(0.65 0.22 285);
+  --chart-3: oklch(0.7 0.18 285);
+  --chart-4: oklch(0.75 0.14 285);
+  --chart-5: oklch(0.7 0.2 280);
+  
+  /* Duel Theme Colors - Enhanced for dark (NO RED/BLUE/GREEN/ORANGE) */
+  --duel-primary: oklch(0.65 0.3 280);
+  --duel-secondary: oklch(0.7 0.05 270);
+  --duel-accent: oklch(0.8 0.08 280);
+  --duel-primary-glow: rgba(167, 139, 250, 0.6);
+  --duel-secondary-glow: rgba(203, 213, 225, 0.6);
+  --duel-accent-glow: rgba(226, 232, 240, 0.6);
+  --metallic-steel: oklch(0.55 0.03 270);
+  --energy-spark: oklch(0.9 0.18 280);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    letter-spacing: -0.011em;
+    position: relative;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  /* Subtle animated grid background - soft lavender */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(rgba(199, 185, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(199, 185, 255, 0.08) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+    animation: gridPulse 8s ease-in-out infinite;
+    transition: opacity 0.5s ease;
+  }
+  
+  .dark body::before {
+    background-image: 
+      linear-gradient(rgba(199, 185, 255, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(199, 185, 255, 0.12) 1px, transparent 1px);
+  }
+  
+  /* Floating particles background - soft lavender gradient */
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle, rgba(199, 185, 255, 0.12) 1px, transparent 1px),
+      radial-gradient(circle, rgba(179, 165, 235, 0.1) 1px, transparent 1px),
+      radial-gradient(circle, rgba(159, 145, 215, 0.08) 1px, transparent 1px);
+    background-size: 50px 50px, 80px 80px, 100px 100px;
+    background-position: 0 0, 40px 40px, 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+    animation: particleFloat 20s linear infinite;
+    transition: opacity 0.5s ease;
+  }
+  
+  .dark body::after {
+    background-image: 
+      radial-gradient(circle, rgba(199, 185, 255, 0.2) 1px, transparent 1px),
+      radial-gradient(circle, rgba(179, 165, 235, 0.16) 1px, transparent 1px),
+      radial-gradient(circle, rgba(159, 145, 215, 0.12) 1px, transparent 1px);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    position: relative;
+  }
+  
+  h1 {
+    @apply text-4xl;
+    letter-spacing: -0.025em;
+  }
+  
+  h2 {
+    @apply text-3xl;
+    letter-spacing: -0.02em;
+  }
+  
+  h3 {
+    @apply text-2xl;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer utilities {
+  /* Grid pulse animation */
+  @keyframes gridPulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Particle float animation */
+  @keyframes particleFloat {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      transform: translateY(-100px) translateX(50px);
+    }
+  }
+  
+  /* Smooth page fade-in with slide */
+  @keyframes fadeInSlide {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-page-enter {
+    animation: fadeInSlide 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Menu animations */
+  @keyframes menuFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes menuSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-menu-fade-in {
+    animation: menuFadeIn 0.25s ease-out;
+  }
+  
+  .animate-menu-slide-down {
+    animation: menuSlideDown 0.3s ease-out both;
+  }
+  
+  /* Duel Arena Background - Purple vs Green Energy Waves */
+  @keyframes duelWaves {
+    0%, 100% {
+      background-position: 0% 50%, 100% 50%;
+      opacity: 0.2;
+    }
+    50% {
+      background-position: 100% 50%, 0% 50%;
+      opacity: 0.35;
+    }
+  }
+  
+  .duel-arena {
+    position: relative;
+  }
+  
+  .duel-arena::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 0% 50%, var(--duel-primary-glow) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 50%, var(--duel-secondary-glow) 0%, transparent 50%);
+    background-size: 200% 100%;
+    animation: duelWaves 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: inherit;
+  }
+  
+  /* VS Symbol Divider Effect */
+  @keyframes vsGlow {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1);
+      text-shadow: 0 0 10px var(--duel-accent-glow);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+      text-shadow: 0 0 20px var(--duel-accent-glow), 0 0 30px var(--duel-accent-glow);
+    }
+  }
+  
+  .vs-divider {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--duel-accent);
+    animation: vsGlow 2s ease-in-out infinite;
+    z-index: 10;
+  }
+  
+  .vs-divider::before,
+  .vs-divider::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--duel-accent), transparent);
+  }
+  
+  .vs-divider::before {
+    left: -50px;
+  }
+  
+  .vs-divider::after {
+    right: -50px;
+  }
+  
+  /* Energy Sparks Particle Effect */
+  @keyframes energySparks {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  .energy-sparks {
+    position: relative;
+  }
+  
+  .energy-sparks::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle, var(--energy-spark) 1px, transparent 1px),
+      radial-gradient(circle, var(--energy-spark) 0.5px, transparent 0.5px);
+    background-size: 60px 60px, 40px 40px;
+    background-position: 0 0, 30px 30px;
+    animation: energySparks 3s linear infinite;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+  
+  /* Metallic Reflection Effect */
+  @keyframes metallicShine {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+  
+  .metallic-frame {
+    position: relative;
+    border: 1px solid var(--metallic-steel);
+    overflow: hidden;
+  }
+  
+  .metallic-frame::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(
+      120deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 70%
+    );
+    background-size: 200% 100%;
+    animation: metallicShine 4s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Player 1 Accent (Left/Purple) */
+  .duel-player1 {
+    position: relative;
+  }
+  
+  .duel-player1::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--duel-primary),
+      transparent
+    );
+    box-shadow: 0 0 15px var(--duel-primary-glow);
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  /* Player 2 Accent (Right/Green) */
+  .duel-player2 {
+    position: relative;
+  }
+  
+  .duel-player2::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--duel-secondary),
+      transparent
+    );
+    box-shadow: 0 0 15px var(--duel-secondary-glow);
+    animation: pulseGlow 2s ease-in-out infinite 1s;
+  }
+  
+  /* Dual Energy Glow for Cards (Purple-Green) */
+  @keyframes dualEnergyGlow {
+    0%, 100% {
+      box-shadow: 
+        -8px 0 20px var(--duel-primary-glow),
+        8px 0 20px var(--duel-secondary-glow),
+        0 0 40px rgba(139, 92, 246, 0.15);
+    }
+    50% {
+      box-shadow: 
+        -12px 0 30px var(--duel-primary-glow),
+        12px 0 30px var(--duel-secondary-glow),
+        0 0 50px rgba(139, 92, 246, 0.25);
+    }
+  }
+  
+  .duel-card-glow {
+    animation: dualEnergyGlow 3s ease-in-out infinite;
+  }
+  
+  /* Subtle Duel Background for Hero Section */
+  @keyframes duelHeroGradient {
+    0%, 100% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+  }
+  
+  .duel-hero-bg {
+    background: linear-gradient(
+      180deg,
+      rgba(139, 92, 246, 0.4) 0%,
+      rgba(109, 40, 217, 0.3) 25%,
+      rgba(88, 28, 135, 0.2) 50%,
+      rgba(59, 7, 100, 0.15) 75%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+    background-size: 100% 200%;
+    animation: duelHeroGradient 10s ease-in-out infinite;
+  }
+  
+  /* Diagonal Slash Effect (1v1 Duel Theme) */
+  .diagonal-slash {
+    position: relative;
+  }
+  
+  .diagonal-slash::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    width: 2px;
+    height: 120%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--duel-accent),
+      transparent
+    );
+    box-shadow: 0 0 10px var(--duel-accent-glow);
+    opacity: 0.3;
+  }
+  
+  /* Pulse Glow Animation for Energy Lines */
+  @keyframes pulseGlow {
+    0%, 100% {
+      opacity: 0.6;
+      filter: blur(2px);
+    }
+    50% {
+      opacity: 1;
+      filter: blur(4px);
+    }
+  }
+  
+  /* Soft neon violet glow effect */
+  @keyframes holoGlow {
+    0%, 100% {
+      box-shadow: 
+        0 0 20px rgba(106, 53, 255, 0.25),
+        0 0 40px rgba(106, 53, 255, 0.15),
+        0 0 60px rgba(106, 53, 255, 0.08);
+    }
+    50% {
+      box-shadow: 
+        0 0 30px rgba(106, 53, 255, 0.35),
+        0 0 50px rgba(106, 53, 255, 0.25),
+        0 0 70px rgba(106, 53, 255, 0.15);
+    }
+  }
+  
+  /* Enhanced button hover with soft neon violet glow */
+  .btn-hover {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .btn-hover:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .btn-hover:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 8px 25px rgba(106, 53, 255, 0.3),
+      0 0 25px rgba(106, 53, 255, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .btn-hover:active {
+    transform: translateY(0) scale(0.98);
+  }
+  
+  /* Card hover with soft lavender holographic effect */
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    backdrop-filter: blur(10px);
+  }
+  
+  .card-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, 
+      rgba(199, 185, 255, 0.3), 
+      rgba(179, 165, 235, 0.2),
+      rgba(159, 145, 215, 0.15));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(106, 53, 255, 0.18),
+      0 0 35px rgba(106, 53, 255, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+  
+  .card-hover:hover::before {
+    opacity: 1;
+  }
+  
+  /* Soft neon violet glow */
+  .glow-subtle {
+    box-shadow: 
+      0 0 20px rgba(106, 53, 255, 0.25),
+      0 0 40px rgba(106, 53, 255, 0.15);
+    animation: holoGlow 3s ease-in-out infinite;
+  }
+  
+  .glow-subtle:hover {
+    box-shadow: 
+      0 0 35px rgba(106, 53, 255, 0.4),
+      0 0 55px rgba(106, 53, 255, 0.25),
+      0 0 75px rgba(106, 53, 255, 0.12);
+  }
+  
+  /* Nav link with soft violet underline */
+  .nav-link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      oklch(0.5 0.25 280), 
+      oklch(0.6 0.2 285),
+      oklch(0.7 0.15 285));
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    transform: translateY(-1px);
+    color: oklch(0.5 0.25 280);
+  }
+  
+  /* Input focus with soft violet ring */
+  .input-focus {
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .input-focus:focus {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 
+      0 0 0 3px rgba(106, 53, 255, 0.2), 
+      0 0 30px rgba(106, 53, 255, 0.15),
+      0 4px 20px rgba(106, 53, 255, 0.1);
+    border-color: oklch(0.5 0.25 280);
+  }
+  
+  /* Animated section header - soft violet glow */
+  @keyframes headerGlow {
+    0%, 100% {
+      text-shadow: 
+        0 0 15px rgba(106, 53, 255, 0.3),
+        0 0 25px rgba(106, 53, 255, 0.2);
+    }
+    50% {
+      text-shadow: 
+        0 0 25px rgba(106, 53, 255, 0.4),
+        0 0 35px rgba(106, 53, 255, 0.3);
+    }
+  }
+  
+  .header-glow {
+    animation: headerGlow 3s ease-in-out infinite;
+  }
+  
+  /* Tech brackets decoration - deep violet */
+  .tech-bracket::before {
+    content: "[ ";
+    color: oklch(0.5 0.25 280);
+    font-weight: bold;
+  }
+  
+  .tech-bracket::after {
+    content: " ]";
+    color: oklch(0.5 0.25 280);
+    font-weight: bold;
+  }
+  
+  /* Scanline effect - soft lavender */
+  @keyframes scanline {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+  
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scanline::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(199, 185, 255, 0.3), 
+      transparent);
+    animation: scanline 4s linear infinite;
+    pointer-events: none;
+  }
+  
+  /* Shimmer effect for buttons */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .btn-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.4), 
+      transparent);
+    transform: translateX(-100%);
+  }
+  
+  .btn-shimmer:hover::after {
+    animation: shimmer 1.5s infinite;
+  }
+  
+  /* Pulse ring effect - soft violet */
+  @keyframes pulseRing {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  .pulse-ring {
+    position: relative;
+  }
+  
+  .pulse-ring::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    border: 2px solid oklch(0.5 0.25 280);
+    opacity: 0;
+  }
+  
+  .pulse-ring:hover::before {
+    animation: pulseRing 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  
+  /* Glass morphism utility - soft lavender tint */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 8px 32px rgba(106, 53, 255, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Dark mode glass - pure black tones */
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Dark mode card hover - black with subtle contrast */
+  .dark .card-hover {
+    background: linear-gradient(135deg, rgba(20, 20, 25, 0.9), rgba(15, 15, 20, 0.8));
+    backdrop-filter: blur(10px);
+  }
+  
+  .dark .card-hover::before {
+    background: linear-gradient(135deg, 
+      rgba(106, 53, 255, 0.15), 
+      rgba(106, 53, 255, 0.08),
+      rgba(106, 53, 255, 0.05));
+  }
+  
+  .dark .card-hover:hover {
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.6),
+      0 0 35px rgba(106, 53, 255, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+  
+  /* Cyber frame decoration - deep violet */
+  .cyber-frame {
+    position: relative;
+    padding: 2px;
+  }
+  
+  .cyber-frame::before,
+  .cyber-frame::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid oklch(0.5 0.25 280);
+  }
+  
+  .cyber-frame::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+  
+  .cyber-frame::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
