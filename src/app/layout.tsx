@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DualTech1v1",
   description: "Plateforme de défis IT 1v1 - Entraîne-toi, challenge, progresse",
+  icons: {
+    icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/951f6ca1-4326-4628-b511-d37b38da1131/generated_images/modern-minimalist-logo-for-1v1-tech-duel-863e8c19-20251105134914.jpg",
+    shortcut: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/951f6ca1-4326-4628-b511-d37b38da1131/generated_images/modern-minimalist-logo-for-1v1-tech-duel-863e8c19-20251105134914.jpg",
+    apple: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/951f6ca1-4326-4628-b511-d37b38da1131/generated_images/modern-minimalist-logo-for-1v1-tech-duel-863e8c19-20251105134914.jpg",
+  },
 };
 
 export default function RootLayout({
