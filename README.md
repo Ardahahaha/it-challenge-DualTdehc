@@ -20,6 +20,7 @@ L’objectif est d’obtenir un écosystème collaboratif simple, transparent et
 - **GitHub Actions** pour le CI/CD (lint + build + déploiement)  
 - **Markdown (.md)** pour les articles  
 - **GitHub Pages** pour l’hébergement
+![Maquette du site](design/maquette.png)
 
 ## 🧩 Structure prévue
 .
