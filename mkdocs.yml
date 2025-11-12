@@ -1,0 +1,7 @@
+site_name: DualTech.1V1
+theme:
+  name: material
+nav:
+  - Accueil: index.md
+  - Articles:
+      - Exemple: content/exemple.md
