@@ -1,4 +1,6 @@
 site_name: DualTech.1V1
+site_description: Communauté IT en Flat-File CI/CD
+site_author: Arda S.
 theme:
   name: material
 nav:
