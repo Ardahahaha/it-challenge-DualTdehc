@@ -1,5 +1,5 @@
 # DualTech.1V1 – Communauté IT en Flat-File CI/CD
-
+https://dualtech1v1.vercel.app/
 ## 🎯 Objectif
 Créer un **site communautaire statique** destiné aux **professionnels et étudiants de l’informatique** (cybersécurité, développement, infrastructure, data, IA…).  
 Le but est de **partager des articles techniques, tutoriels et retours d’expérience**, publiés **asynchronement via Git**.  
