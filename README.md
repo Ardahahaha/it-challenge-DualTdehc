@@ -49,7 +49,7 @@ Copier le code
 ```yaml
 ---
 title: "Installer un serveur Apache"
-author: "Arda S."
+author: "Arda Songuret Khalid Maimouni"
 tags: ["linux", "serveur", "web"]
 date: "2025-11-12"
 ---
@@ -57,12 +57,7 @@ Contenu :
 Explique comment installer et configurer Apache sur Ubuntu, gérer les services et tester localement.
 
 🧑‍🤝‍🧑 Crédits
-Arda S.
-(ajouter les prénoms et initiales de tes coéquipiers si besoin)
-
-🖼️ Maquette
-Figma / Stitch : https://stitch.withgoogle.com/
-(ou image à ajouter dans un dossier /design)
+Arda Songur et khalid maimouni
 
 ⚙️ Licence
 Code MIT – Contenus CC BY 4.0
