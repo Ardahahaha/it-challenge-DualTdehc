@@ -1,4 +1,4 @@
-# DualTech.1V1 – Communauté IT en Flat-File CI/CD
+# DualTech.1V1 – Communauté IT en Flat-File CI/CD (Fait par Arda Songur et Khalid maimouni)
 https://dualtech1v1.vercel.app/
 ## 🎯 Objectif
 Créer un **site communautaire statique** destiné aux **professionnels et étudiants de l’informatique** (cybersécurité, développement, infrastructure, data, IA…).  
